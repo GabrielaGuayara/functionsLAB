@@ -26,3 +26,15 @@ function getAverage(arr){
 }
 console.log(getAverage(arr))
 
+//Function that takes an array of string and return the longest string
+let str1 = "hello"
+let str2 = "helloWorld"
+function getTheLongest(str1, str2){
+    if(str1.length>str2.length){
+        return "Str1 is the longest"
+    }else{
+        return "Str2 is the longest"
+    }
+}
+
+console.log(getTheLongest(str1, str2))
