@@ -38,3 +38,32 @@ function getTheLongest(str1, str2){
 }
 
 console.log(getTheLongest(str1, str2))
+
+
+//Take an array of strings, and a number and return an array of the strings that are longer that the given number
+// let stringLongerThan =(['say', 'hello', 'in', 'the', 'morning'],3)
+
+
+//Function that takes a number and print every number between 1 and n without using loops.
+
+
+//PART TWO: Thinking Methodically
+/*
+Map the array to change the “occupation” key to “job” and increment every age by 1.
+Use the reduce method to calculate the sum of the ages.
+Then use the result to calculate the average age.
+ */
+
+let arrOfStrings = [
+    { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+    { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+    { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+    ]
+
+//Sort the array by age.
+let newArrSorted = arrOfStrings.sort((a,b)=> a.age - b.age);
+console.log(newArrSorted)
+
+//Filter the array to remove entries with an age greater than 50.
