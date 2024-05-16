@@ -49,8 +49,6 @@
 
 //PART TWO: Thinking Methodically
 /*
-Use the reduce method to calculate the sum of the ages.
-Then use the result to calculate the average age.
  */
 
 let arrOfObj = [
@@ -73,4 +71,11 @@ let greaterThan50 = arrOfObj.filter(item=> item.age < 50 );
 let incremeentAge = greaterThan50.map(item => parseInt(item.age)+1);
 console.log(incremeentAge)//At the moment, it only returns an array with the age increased by 1. Still working on it
 
-//
+/*Use the reduce method to calculate the sum of the ages.
+Then use the result to calculate the average age.
+*/
+let value = 0;
+let sumOfAges = incremeentAge.reduce((accum, elem)=> accum + elem, value);
+console.log(sumOfAges)
+let average = sumOfAges/incremeentAge.length;
+console.log(average.toFixed(2))
