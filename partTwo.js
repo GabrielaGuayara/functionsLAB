@@ -1,6 +1,6 @@
-const string= "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+ const str= "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 
-function convertData(str){
+ function convertData(str){
 
     let arr = [];
 
@@ -35,7 +35,7 @@ function convertData(str){
 
 //PART TWO: Thinking Methodically
 
-    let arrOfObj = convertData(string)
+    let arrOfObj = convertData(str)
 
 
 //Sort the array by age.
@@ -81,3 +81,4 @@ console.log(lessThan50)
 console.log("\n*-----SUM AND AVERAGE OF AGES---------*")
 console.log(sumAndAvg(updatedArr))
 
+export { str , convertData}

@@ -1,38 +1,42 @@
-const string= "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+import {str , convertData}  from "./partTwo.js";
 
-function convertData(str){
 
-    let arr = [];
+// const string= "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 
-    //Getting the rows using the split() metod
-    let row = str.split("\n");
+// function convertData(str){
 
-    let columnNum = row[0].split(",").length;
+//     let arr = [];
 
-    let headers = row[0].split(",");
+//     //Getting the rows using the split() metod
+//     let row = str.split("\n");
 
-    //For loop to loop through each row
-        for(let i=1; i<row.length; i++){
+//     let columnNum = row[0].split(",").length;
 
-            let cells = row[i].split(",");
+//     let headers = row[0].split(",");
 
-        //Create an object for this row
-            let obj ={};
+//     //For loop to loop through each row
+//         for(let i=1; i<row.length; i++){
 
-                //For loop to loop through each cell and add it to the object
-                for(let j=0; j< columnNum; j++){
+//             let cells = row[i].split(",");
 
-                    obj[headers[j]] = cells[j];
+//         //Create an object for this row
+//             let obj ={};
+
+//                 //For loop to loop through each cell and add it to the object
+//                 for(let j=0; j< columnNum; j++){
+
+//                     obj[headers[j]] = cells[j];
                 
-                }
+//                 }
         
-            arr.push(obj)
-        }
+//             arr.push(obj)
+//         }
 
-        return arr;
-}
+//         return arr;
+// }
 
-let arr = convertData(string)
+let arr = convertData(str)
+
 
 //PART THREE: THINKING CRITICALLY
 function incrementAge(arr){
@@ -42,7 +46,9 @@ function incrementAge(arr){
     return arr;
 }
 
-console.log(incrementAge(arr))
+
+
+//Take an object, make a copy, and increment the age field of the copy. Return the copy.
 let copyArray = incrementAge(arr);
 
 
@@ -54,6 +60,6 @@ function copyAndIncrementAge(acopyArr) {
      return arr;
  }
 
-
+ console.log(incrementAge(arr))
  console.log(copyAndIncrementAge(copyArray))
 
