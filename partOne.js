@@ -27,7 +27,7 @@ function getAverage(arr){
 
         }
     // console.log(sum, len)
-    return avg = sum/len;
+    return avg = sum/arr.length;
 }
 
 
@@ -40,11 +40,11 @@ function getTheLongest(str1, str2){
     
     if (str1.length > str2.length){
 
-        return "Str1 is the longest"
+        return `Str1: "${str1}"`
     
     } else{
         
-        return "Str2 is the longest"
+        return `Str2: "${str2}"`
     
     }
 }
@@ -56,7 +56,7 @@ Take an array of strings, and a number and return an array of the strings that a
 For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
  */
 
-function arrayLongerThanNum(str1, n){
+function stringsLongerThan(str1, n){
 
     let arr = [];
 
@@ -71,9 +71,11 @@ function arrayLongerThanNum(str1, n){
 
     }
 
-    return [arr, n];
+    return arr;
 }
 
 
-
-
+console.log(`The sum of the array of numbes is ${sumOfNumbers(arr)}`)
+console.log(`The average the array of number is ${getAverage(arr).toFixed(2)}`)
+console.log(`The longest array is ${getTheLongest(str1, str2)}`)
+console.log(stringsLongerThan(str1, 3));
