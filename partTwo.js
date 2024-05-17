@@ -36,32 +36,42 @@ function convertData(str){
 //PART TWO: Thinking Methodically
 
     let arrOfObj = convertData(string)
+    // console.log(arrOfObj)
 
 //Sort the array by age.
     let newArrSorted = arrOfObj.sort((a,b)=> a.age - b.age);
 
 //Filter the array to remove entries with an age greater than 50.
-    let greaterThan50 = arrOfObj.filter(item=> item.age < 50 );
+    let greaterThan50 = arrOfObj.filter(item => parseInt(item.Age) < 50);
+    // console.log(greaterThan50)
     
 //Map the array to change the “occupation” key to “job” and increment every age by 1.
-    let incremeentAge = greaterThan50.map(item => parseInt(item.age)+1);
-    
-    console.log(incremeentAge)//At the moment, it only returns an array with the age increased by 1. Still working on it
+function updateArray(greaterThan50){    
+    let updArray = greaterThan50.map(item =>  parseInt(item.Age) + 1
+        // // Update occupation
+        // let updatedOccupation = item.occupation
+        
+        // // Return an object with both updated properties
+        // return { ...item, age: updatedAge, occupation: updatedOccupation };
+    );
+
+    return updArray;
+}
+
+console.log(updateArray(greaterThan50));
 
 
-
-let arr = convertData()
 //Use the reduce method to calculate the sum of the ages. Then use the result to calculate the average age.
 
-function sumOfAges(arrAge){
+// function sumAndAvg(arrAge){
     
-    let value = 0;
-    
-    return arrAge.reduce((accum, elem)=> accum + elem, value);
+//     let result = arrAge.reduce((accum, elem)=> accum + elem, 0);
+//     // let average = sumOfAges/arrAge.length;
+//     return result;
+// }
 
-}
-let sumOfAgesElem = sumOfAges(string)
-// let average = sumOfAges/arrAge.length;
+// let sumOfAgesElem = sumAndAvg(string)
+
 // console.log(newArrSorted)
 // console.log(greaterThan50)
 // console.log(average.toFixed(2))
