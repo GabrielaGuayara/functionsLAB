@@ -8,19 +8,23 @@ function sumOfNumbers(arr){
     let sum = 0;
     
     for(let i = 0; i < arr.length; i++){
+        
         sum += arr[i];
     }
+
     return sum;
 }
+
 
 //Function that takes an array of numbers and return the averge.
 function getAverage(arr){
     
     let sum = 0;
 
-    let len = arr.length
-        for(let i = 0; i < len; i++){
+        for(let i = 0; i < arr.length; i++){
+            
             sum += arr[i];
+
         }
     // console.log(sum, len)
     return avg = sum/len;
@@ -45,13 +49,31 @@ function getTheLongest(str1, str2){
     }
 }
 
-console.log(getTheLongest(str1, str2))
-
-//Take an array of strings, and a number and return an array of the strings that are longer that the given number
-let stringLongerThan =(['say', 'hello', 'in', 'the', 'morning'],3)
 
 
-//Function that takes a number and print every number between 1 and n without using loops.
+/*
+Take an array of strings, and a number and return an array of the strings that are longer than the given number. 
+For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
+ */
 
-console.log(sumOfNumbers(arr))
-console.log(getAverage(arr))
+function arrayLongerThanNum(str1, n){
+
+    let arr = [];
+
+    let len = str1.length;
+
+    for(let i = 0; i < n+1; i++){
+
+        if(len > n){
+
+            arr.push(str1[i])
+        }
+
+    }
+
+    return [arr, n];
+}
+
+
+
+
