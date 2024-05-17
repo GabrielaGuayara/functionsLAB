@@ -26,8 +26,9 @@ function getAverage(arr){
             sum += arr[i];
 
         }
+
     // console.log(sum, len)
-    return avg = sum/arr.length;
+    return sum/arr.length;
 }
 
 
@@ -73,6 +74,20 @@ function stringsLongerThan(str1, n){
 
     return arr;
 }
+
+//take a number, n, and print every number between 1 and n without using loops. Use recursion.
+
+function recursiveFunction (n){
+
+    if(n<0)
+        return;
+    else{
+        console.log(n)
+        return recursiveFunction(n-1);
+    }
+}
+
+console.log(recursiveFunction(10))
 
 
 console.log(`The sum of the array of numbes is ${sumOfNumbers(arr)}`)
