@@ -36,33 +36,35 @@ function convertData(str){
 //PART TWO: Thinking Methodically
 
     let arrOfObj = convertData(string)
-    // console.log(arrOfObj)
+
 
 //Sort the array by age.
-    let newArrSorted = arrOfObj.sort((a,b)=> a.age - b.age);
+    let newArrSorted = arrOfObj.sort((x,y)=> x.age - y.age);
+
 
 //Filter the array to remove entries with an age greater than 50.
-    let greaterThan50 = arrOfObj.filter(item => parseInt(item.Age) < 50);
-    // console.log(greaterThan50)
+    let lessThan50 = arrOfObj.filter(item => parseInt(item.Age) < 50);
     
+
 //Map the array to change the “occupation” key to “job” and increment every age by 1.
-function updateArray(greaterThan50){    
-    let updArray = greaterThan50.map(item =>  parseInt(item.Age) + 1
-        // // Update occupation
-        // let updatedOccupation = item.occupation
+function updateArray(lessThan50Than50){    
+    
+    let updArray = lessThan50.map(item =>  parseInt(item.Age) + 1
+        // change the “occupation” key to “job”
+
+        // let updateKey = item.occupation
         
         // // Return an object with both updated properties
-        // return { ...item, age: updatedAge, occupation: updatedOccupation };
+        // return { ...item, age: updatedAge, occupation: updatedkey };
     );
 
     return updArray;
 }
 
-let updatedArr = updateArray(greaterThan50);
+let updatedArr = updateArray(lessThan50);
 
 
 //Use the reduce method to calculate the sum of the ages. Then use the result to calculate the average age.
-
 function sumAndAvg(arrAge){
     
     let sum = arrAge.reduce((accum, elem)=> accum + elem, 0);
@@ -71,10 +73,11 @@ function sumAndAvg(arrAge){
     return `The sum  of the ages is ${sum} and the average is ${average.toFixed(2)}`
 }
 
-console.log(sumAndAvg(updatedArr))
 
-// console.log(newArrSorted)
-// console.log(greaterThan50)
-// console.log(average.toFixed(2))
-//cnsole.log((sumAndAvg(greaterTan50)))
+console.log("*----------ARRAY SORTED BY AGE-------------*")
+console.log(newArrSorted)
+console.log("\n*-----ARRAY WITH AGES LESS THAN 50---------*")
+console.log(lessThan50)
+console.log("\n*-----SUM AND AVERAGE OF AGES---------*")
+console.log(sumAndAvg(updatedArr))
 
