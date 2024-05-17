@@ -49,18 +49,20 @@ function convertData(str){
     console.log(incremeentAge)//At the moment, it only returns an array with the age increased by 1. Still working on it
 
 
+
+let arr = convertData()
 //Use the reduce method to calculate the sum of the ages. Then use the result to calculate the average age.
+
+function sumOfAges(arrAge){
     
-let value = 0;
+    let value = 0;
     
-    let sumOfAges = incremeentAge.reduce((accum, elem)=> accum + elem, value);
-    
-    console.log(sumOfAges)
-    
-    let average = sumOfAges/incremeentAge.length;
-    
-  
-    console.log(newArrSorted)
-    console.log(greaterThan50)
-    console.log(average.toFixed(2))
+    return arrAge.reduce((accum, elem)=> accum + elem, value);
+
+}
+let sumOfAgesElem = sumOfAges(string)
+// let average = sumOfAges/arrAge.length;
+// console.log(newArrSorted)
+// console.log(greaterThan50)
+// console.log(average.toFixed(2))
 
