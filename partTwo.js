@@ -58,21 +58,23 @@ function updateArray(greaterThan50){
     return updArray;
 }
 
-console.log(updateArray(greaterThan50));
+let updatedArr = updateArray(greaterThan50);
 
 
 //Use the reduce method to calculate the sum of the ages. Then use the result to calculate the average age.
 
-// function sumAndAvg(arrAge){
+function sumAndAvg(arrAge){
     
-//     let result = arrAge.reduce((accum, elem)=> accum + elem, 0);
-//     // let average = sumOfAges/arrAge.length;
-//     return result;
-// }
+    let sum = arrAge.reduce((accum, elem)=> accum + elem, 0);
+    let average = sum/arrAge.length;
+    
+    return `The sum  of the ages is ${sum} and the average is ${average.toFixed(2)}`
+}
 
-// let sumOfAgesElem = sumAndAvg(string)
+console.log(sumAndAvg(updatedArr))
 
 // console.log(newArrSorted)
 // console.log(greaterThan50)
 // console.log(average.toFixed(2))
+//cnsole.log((sumAndAvg(greaterTan50)))
 
